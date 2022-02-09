@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/form.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="form">
+        <table>
+            <tr>
+                <td id="right"><label for="nom">Name:</label></td>
+                <td><input type="text" placeholder="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">Surname:</label></td>
+                <td><input type="text" placeholder="surname" name="sur" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">E-mail:</label></td>
+                <td><input type="email" placeholder="email" name="mail" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">Phone number:</label></td>
+                <td><input type="tel" placeholder="number" name="phone" required></td>
+            </tr>
+            <tr>
+                <td id="right" id="dni"><label for="nom">DNI:</label></td>
+                <td><input type="text" placeholder="12345678A" name="dni" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">IBAN:</label></td>
+                <td><input type="text" placeholder="ES11 2222 3333 4444 5555 6666" name="iban" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">Swift:</label></td>
+                <td><input type="text" placeholder="1111 22 33 444" name="sw" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">Username:</label></td>
+                <td><input type="text" placeholder="username" name="user" required></td>
+            </tr>
+            <tr>
+                <td id="right"><label for="nom">Birthdate:</label></td>
+                <td><input type="date" name="bday"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="btnRes">Restart</button><button id="btnSend">Send</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
