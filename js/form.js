@@ -14,14 +14,13 @@ function validateNIF(dni) {
         letter = 'TRWAGMYFPDXBNJZSQVHLCKET';
         letter = letter.substring(number, number + 1);
         if (letter != letr.toUpperCase()) {
-            alert('Dni erroneo, la letra del NIF no se corresponde');
+            alert('Invalid NIF, the letter does not match');
             return false;
         } else {
-            alert('Dni correcto');
             return true;
         }
     } else {
-        alert('Dni erroneo, formato no válido');
+        alert('Invalid NIF');
         return false;
     }
 }
@@ -57,6 +56,7 @@ function validateIBAN(IBAN) {
     if (rest == 1){
         return true;
     }
+    alert('Invalid IBAN');
     return false;
 }
 
@@ -77,6 +77,15 @@ function getnumIBAN(letter) {
 }
 
 //Swift validation
+function validateSwift(swift){
+    swift = swift.trim();
+    var isValid = /^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$/.test(swift);
+    if(isValid){
+        return true;
+    }
+    alert('Invalid Swift');
+    return false;
+}
 
 //Phone number validation
 function validatePhoneNumber(number){
@@ -84,5 +93,18 @@ function validatePhoneNumber(number){
     if(number.length == 9){
         return true;
     }
+    alert('Invalid phone number');
     return false;
 }
+
+function $(selector){
+    return document.querySelector(selector);
+}
+
+$("#btnSend").addEventListener("click", function(){
+    validateNIF("#dni");
+    validateIBAN("#iban");
+    validateSwift("#swift");
+    validatePhoneNumber("#number");
+});
+
