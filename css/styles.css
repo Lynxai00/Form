@@ -1,14 +1,18 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('../img/background.jpg');
 }
 
 h1{
     text-align: center;
+    background-color: rgb(170, 240, 222);
 }
 
 table{
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    border: 2px solid aquamarine;
 }
 
 input{
